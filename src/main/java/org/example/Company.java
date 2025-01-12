@@ -6,7 +6,7 @@ public class Company {
     private double giro;
     private String[] developerNames;
 
-    public Company(int id, String name, double giro, int developerCount) {
+    public Company(int id, String name, double giro, String[] developerCount) {
         this.id = id;
         this.name = name;
         this.giro = giro > 0 ? giro : 0;  // Giro negatif olamaz

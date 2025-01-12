@@ -47,11 +47,11 @@ public class Employee {
         this.password = password;
     }
 
-    public String[] getHealthplans() {
+    public String[] getHealthPlans() {
         return healthplans;
     }
 
-    public void addHealthplan(int index, String name) {
+    public void addHealthPlan(int index, String name) {
         if (index >= 0 && index < healthplans.length) {
             if (healthplans[index] == null) {
                 healthplans[index] = name;
