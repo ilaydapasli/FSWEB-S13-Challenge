@@ -10,7 +10,7 @@ public class Company {
         this.id = id;
         this.name = name;
         this.giro = giro > 0 ? giro : 0;  // Giro negatif olamaz
-        this.developerNames = new String[developerCount];
+        this.developerNames =developerCount;
     }
 
     public int getId() {

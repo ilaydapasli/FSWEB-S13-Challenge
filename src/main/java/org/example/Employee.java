@@ -5,14 +5,14 @@ public class Employee {
     private String fullName;
     private String email;
     private String password;
-    private String[] healthplans;
+    private  String[] healthPlans;
 
-    public Employee(int id, String fullName, String email, String password, int healthplanCount) {
+    public Employee(int id, String fullName, String email, String password, String [] healthPlans) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.healthplans = new String[healthplanCount];
+        this.healthPlans = healthPlans;
     }
 
     public int getId() {
@@ -48,13 +48,13 @@ public class Employee {
     }
 
     public String[] getHealthPlans() {
-        return healthplans;
+        return healthPlans;
     }
 
     public void addHealthPlan(int index, String name) {
-        if (index >= 0 && index < healthplans.length) {
-            if (healthplans[index] == null) {
-                healthplans[index] = name;
+        if (index >= 0 && index < healthPlans.length) {
+            if (healthPlans[index] == null) {
+                healthPlans[index] = name;
                 System.out.println("Healthplan added: " + name);
             } else {
                 System.out.println("Healthplan at index " + index + " is already occupied.");
@@ -66,12 +66,12 @@ public class Employee {
 
     @Override
     public String toString() {
-        StringBuilder healthplansList = new StringBuilder();
-        for (String plan : healthplans) {
+        StringBuilder healthPlansList = new StringBuilder();
+        for (String plan : healthPlans) {
             if (plan != null) {
-                healthplansList.append(plan).append(" ");
+                healthPlansList.append(plan).append(" ");
             }
         }
-        return "Employee{id=" + id + ", fullName='" + fullName + "', email='" + email + "', healthplans=" + healthplansList.toString() + "}";
+        return "Employee{id=" + id + ", fullName='" + fullName + "', email='" + email + "', healthPlans=" + healthPlansList.toString() + "}";
     }
 }
